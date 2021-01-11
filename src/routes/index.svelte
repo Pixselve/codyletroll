@@ -1,39 +1,33 @@
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
+
+	img {
+	  animation: rotate linear 3s infinite;
 	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
+	@keyframes rotate {
+		0%{
+			transform: rotate(0deg);
+		}
+		50%{
+			transform: rotate(180deg);
+		}
+		100%{
+			transform: rotate(360deg);
 		}
 	}
+
+	.centered {
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+	}
+
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Cody le troll</title>
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<figure>
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<div class="centered">
+	<img src="android-icon-192x192.png" alt="cody">
+</div>
