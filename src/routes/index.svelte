@@ -1,33 +1,28 @@
 <style>
 
-	img {
-	  animation: rotate linear 3s infinite;
-	}
+    img {
+        animation: rotate linear 3s infinite;
+    }
 
-	@keyframes rotate {
-		0%{
-			transform: rotate(0deg);
-		}
-		50%{
-			transform: rotate(180deg);
-		}
-		100%{
-			transform: rotate(360deg);
-		}
-	}
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 
-	.centered {
-		margin-top: 50px;
-		display: flex;
-		justify-content: center;
-	}
 
 </style>
 
 <svelte:head>
-	<title>Cody le troll</title>
+  <title>Cody le troll</title>
 </svelte:head>
 
-<div class="centered">
-	<img src="android-icon-192x192.png" alt="cody">
-</div>
+
+<img src="android-icon-192x192.png" alt="cody">
+
