@@ -2,6 +2,7 @@
 
     img {
         animation: rotate linear 3s infinite;
+        height: 50%;
     }
 
     @keyframes rotate {
@@ -16,13 +17,24 @@
         }
     }
 
+    img:hover {
+        cursor: pointer;
+    }
+
 
 </style>
+
+<script lang="ts">
+  let isHovered = false;
+  $: path = isHovered ? "cody-o.png" : "cody-d.png"
+
+
+</script>
 
 <svelte:head>
   <title>Cody le troll</title>
 </svelte:head>
 
 
-<img src="android-icon-192x192.png" alt="cody">
+<img on:mouseenter={() => {isHovered = true}} on:mouseleave={() => isHovered = false} src="{path}" alt="cody">
 
