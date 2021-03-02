@@ -15,7 +15,7 @@ export async function preload(page, session) {
 </script>
 
 <script lang="ts">
-import Door from "../../components/Door.svelte";
+import Door from "../../../components/Door.svelte";
 
 export let name: string;
 
@@ -44,15 +44,15 @@ function openDoor() {
   <main class="reveal">
 
 
-    <div class="title">{name} vous a Codysé !</div>
-    <div class="subtitle">Gros bisous sur tes joues mon loulou</div>
+    <div class="title">{name} vous a Testiboulé !</div>
+    <div class="subtitle">J'ai pas le permis pour piloter une fiat mais j'ai le permis pour piloter ton fiak</div>
 
 
-    <img class="cody-face" src="cody-o.png" alt="">
+    <img class="cody-face" src="testiscala/avatar.png" alt="">
   </main>
 {:else}
   <main class="doorBackground">
-    <Door color="#ff0" on:click={openDoor}/>
+    <Door color="#142ba0" on:click={openDoor}/>
   </main>
 {/if}
 
@@ -121,13 +121,13 @@ function openDoor() {
     @media screen and (max-width: 768px) {
       font-size: 3rem;
     }    @media screen and (max-width: 425px) {
-      font-size: 2rem;
-    }
+    font-size: 2rem;
+  }
 
   }
 
   .subtitle {
-    @include text3d(#ff00bf, 0.5, 0.5);
+    @include text3d(#77ff00, 0.5, 0.5);
     font-size: 2rem;
     text-align: center;
     animation: ease-in-out infinite negativeMove 2s;
@@ -145,7 +145,7 @@ function openDoor() {
     overflow: hidden;
     height: 100vh;
     width: 100%;
-    background-color: #f1ff59;
+    background-color: #142ba0;
     display: flex;
     align-items: center;
     justify-content: center;
