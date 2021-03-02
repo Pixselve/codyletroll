@@ -52,7 +52,7 @@ function openDoor() {
   </main>
 {:else}
   <main class="doorBackground">
-    <Door on:click={openDoor}/>
+    <Door color="#ff0" on:click={openDoor}/>
   </main>
 {/if}
 
