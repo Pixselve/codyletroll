@@ -1,12 +1,12 @@
 <style>
-	main {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 100vh;
-	}
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
 </style>
 
 <main>
-	<slot></slot>
+  <slot></slot>
 </main>
