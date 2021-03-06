@@ -4,5 +4,16 @@ body {
 	font-size: 14px;
 	line-height: 1.5;
 	color: #333;
-	/*background-color: #f1ff59;*/
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }

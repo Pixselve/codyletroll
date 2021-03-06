@@ -5,17 +5,7 @@
         height: 50%;
     }
 
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
-        50% {
-            transform: rotate(180deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
+
 
     img:hover {
         cursor: pointer;
@@ -35,8 +25,8 @@
 </style>
 
 <script lang="ts">
-  let isHovered = false;
-  $: path = isHovered ? "cody-o.png" : "cody-d.png"
+let isHovered = false;
+$: path = isHovered ? "cody-o.png" : "cody-d.png";
 
 
 </script>
