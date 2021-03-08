@@ -29,5 +29,5 @@ export let name: string;
 <Room>
   <TextCustom color="#00F7FF" x={1} y={1} size="5rem" move="-2rem">{name} vous a Codysé !</TextCustom>
   <TextCustom color="#77FF00" x={0.5} y={0.5} size="2rem" move="2rem">Gros bisous sur tes joues mon loulou</TextCustom>
-  <RotatingAvatar/>
+  <RotatingAvatar/imagePath="?s9b9o9j9t/avatar.png">
 </Room>
