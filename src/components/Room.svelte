@@ -6,7 +6,9 @@ export let backgroundColor: string = "#f1ff59"
 
 function openDoor() {
   isDoorOpened = true;
-  new Audio("/codyfied/music.mp3").play();
+  const audio = new Audio("/codyfied/music.mp3");
+  audio.loop = true;
+  audio.play();
 }
 
 </script>
