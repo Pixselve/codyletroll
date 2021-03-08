@@ -15,19 +15,19 @@ export let name: string;
 
 <svelte:head>
   <title>{name} a quelque chose à vous dire</title>
-  <meta name="title" content="{name} a quelque chose à vous dire">
+  <meta name="title" content="{name} a besoin de ton aide">
   <meta name="description"
-        content="Hey ! C'est moi {name}. J'ai vraiment envie de te dire quelque chose... Mais je t'avoue que je ne sais pas trop comment m'y prendre. ❤😘😍💋">
-  <meta property="og:title" content="{name} a quelque chose à vous dire">
+        content="Regardes là bas ! C'est {name}, il est en train de ramper. Il faut que tu ailles l'aider.">
+  <meta property="og:title" content="{name} a besoin de ton aide">
   <meta property="og:description"
-        content="Hey ! C'est moi {name}. J'ai vraiment envie de te dire quelque chose... Mais je t'avoue que je ne sais pas trop comment m'y prendre. ❤😘😍💋">
-  <meta property="twitter:title" content="{name} a quelque chose à vous dire">
+        content="Regardes là bas ! C'est {name}, il est en train de ramper. Il faut que tu ailles l'aider.">
+  <meta property="twitter:title" content="{name} a besoin de ton aide">
   <meta property="twitter:description"
-        content="Hey ! C'est moi {name}. J'ai vraiment envie de te dire quelque chose... Mais je t'avoue que je ne sais pas trop comment m'y prendre. ❤😘😍💋">
+        content="Regardes là bas ! C'est {name}, il est en train de ramper. Il faut que tu ailles l'aider.">
 </svelte:head>
 
-<Room/backgroundcolor="#0E0E0E">
-  <TextCustom color="#00F7FF" x={1} y={1} size="5rem" move="-2rem">{name} vous a Codysé !</TextCustom>
-  <TextCustom color="#77FF00" x={0.5} y={0.5} size="2rem" move="2rem">Gros bisous sur tes joues mon loulou</TextCustom>
-  <RotatingAvatar/imagePath="yanis/avatar.png">
+<Room backgroundColor="#0E0E0E">
+  <TextCustom color="#00F7FF" x={1} y={1} size="5rem" move="-2rem">Noooon, c'était un piège !</TextCustom>
+  <TextCustom color="#77FF00" x={0.5} y={0.5} size="2rem" move="2rem">Ce *** de {name} a envoyé une marée de creepy crawlies à tes trousses !</TextCustom>
+  <RotatingAvatar imagePath="yanis/avatar.png"/>
 </Room>
