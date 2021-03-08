@@ -6,6 +6,7 @@
 - `/testiscala/[name]` - Testiscala theme
 - `/yami/[name]` - Yami theme
 - `/cande/[name]` - Cande theme
+- `/pascal/[name]` - Pascal theme
 
 
 # ⚒ Add your own theme
