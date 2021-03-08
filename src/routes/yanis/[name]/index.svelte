@@ -26,7 +26,7 @@ export let name: string;
 </svelte:head>
 
 <Room backgroundColor="#0E0E0E">
-  <TextCustom color="#00F7FF" x={1} y={1} size="5rem" move="-2rem">Noooon, c'était un piège !</TextCustom>
-  <TextCustom color="#77FF00" x={0.5} y={0.5} size="2rem" move="2rem">Ce *** de {name} a envoyé une marée de creepy crawlies à tes trousses !</TextCustom>
+  <TextCustom color="#C60B0B" x={1} y={1} size="5rem" move="-2rem">Noooon, c'était un piège !</TextCustom>
+  <TextCustom color="#8615FF" x={0.5} y={0.5} size="2rem" move="2rem">Ce *** de {name} a envoyé une marée de creepy crawlies à tes trousses !</TextCustom>
   <RotatingAvatar imagePath="yanis/avatar.png"/>
 </Room>
