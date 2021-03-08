@@ -6,10 +6,9 @@ export async function preload(page) {
 </script>
 
 <script lang="ts">
-import TextCustom from "../../components/TextCustom.svelte";
-import Room from "../../components/Room.svelte";
-import RotatingAvatar from "../../components/RotatingAvatar.svelte";
-
+import TextCustom from "../../../components/TextCustom.svelte";
+import RotatingAvatar from "../../../components/RotatingAvatar.svelte";
+import Room from "../../../components/Room.svelte";
 export let name: string;
 </script>
 
