@@ -7,7 +7,7 @@
 - `/yami/[name]` - Yami theme
 - `/cande/[name]` - Cande theme
 - `/pascal/[name]` - Pascal theme
-
+- `/yanis/[name]` - Yanis theme
 
 # ⚒ Add your own theme
 
