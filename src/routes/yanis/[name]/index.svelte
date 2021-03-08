@@ -26,7 +26,7 @@ export let name: string;
         content="Hey ! C'est moi {name}. J'ai vraiment envie de te dire quelque chose... Mais je t'avoue que je ne sais pas trop comment m'y prendre. ❤😘😍💋">
 </svelte:head>
 
-<Room>
+<Room/backgroundcolor="#0E0E0E">
   <TextCustom color="#00F7FF" x={1} y={1} size="5rem" move="-2rem">{name} vous a Codysé !</TextCustom>
   <TextCustom color="#77FF00" x={0.5} y={0.5} size="2rem" move="2rem">Gros bisous sur tes joues mon loulou</TextCustom>
   <RotatingAvatar/imagePath="yanis/avatar.png">
