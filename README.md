@@ -11,6 +11,8 @@
 
 # ⚒ Add your own theme
 
+Watch the french tutorial: https://www.youtube.com/watch?v=zxHaAoRrHoY
+
 1. Fork the project (In the top-right corner of the page, click Fork)
    
 ![Fork image](https://docs.github.com/assets/images/help/repository/fork_button.jpg)
