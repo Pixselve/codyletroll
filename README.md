@@ -8,6 +8,7 @@
 - `/cande/[name]` - Cande theme
 - `/pascal/[name]` - Pascal theme
 - `/yanis/[name]` - Yanis theme
+- `/guigui/[name]` - Guigui theme
 
 # ⚒ Add your own theme
 
