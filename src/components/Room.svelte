@@ -3,10 +3,11 @@ import Door from "./Door.svelte";
 let isDoorOpened = false;
 
 export let backgroundColor: string = "#f1ff59"
+export let songPath: string = "/codyfied/music.mp3"
 
 function openDoor() {
   isDoorOpened = true;
-  const audio = new Audio("/codyfied/music.mp3");
+  const audio = new Audio(songPath);
   audio.loop = true;
   audio.play();
 }
