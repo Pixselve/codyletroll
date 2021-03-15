@@ -28,5 +28,5 @@ export let name: string;
 <Room backgroundColor="#2897FF">
   <TextCustom color="#FFFFFF" x={1} y={1} size="5rem" move="-2rem">{name} vous a Trololé !</TextCustom>
   <TextCustom color="#77FF00" x={0.5} y={0.5} size="2rem" move="2rem">Caresse ma calvasse</TextCustom>
-  <RotatingAvatar imagePath="Odin/avatar.png"/>
+  <RotatingAvatar imagePath="Odin/avatar.png.png"/>
 </Room>
