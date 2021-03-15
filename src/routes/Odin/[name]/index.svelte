@@ -13,7 +13,7 @@ export let name: string;
 </script>
 
 <svelte:head>
-  <title>{name} a quelque chose à vous dire</title>
+  <title>{name} est à 2m de toi...</title>
   <meta name="title" content="{name} a quelque chose à vous dire">
   <meta name="description"
         content="Hey ! C'est moi {name}. J'ai vraiment envie de te dire quelque chose... Mais je t'avoue que je ne sais pas trop comment m'y prendre. ❤😘😍💋">
