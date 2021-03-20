@@ -1,52 +1,42 @@
-![cody le troll](https://imgur.com/eFv8MYD.png)
+# create-svelte
 
-# 🖌 Available themes
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-- `/[name]` - Cody theme
-- `/testiscala/[name]` - Testiscala theme
-- `/yami/[name]` - Yami theme
-- `/cande/[name]` - Cande theme
-- `/pascal/[name]` - Pascal theme
-- `/yanis/[name]` - Yanis theme
-- `/guigui/[name]` - Guigui theme
+## Creating a project
 
-# ⚒ Add your own theme
+If you're seeing this, you've probably already done this step. Congrats!
 
-Watch the french tutorial: https://www.youtube.com/watch?v=zxHaAoRrHoY
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-1. Fork the project (In the top-right corner of the page, click Fork)
-   
-![Fork image](https://docs.github.com/assets/images/help/repository/fork_button.jpg)
-
-2. Add your theme
-   1. In `static` , create a folder with your name and add a picture named avatar.png (or jpeg, jpg...). You should have something like `static/pixselve/avatar.png`.
-   2. In `src/routes/`, create a folder with your name and a subfolder named `[name]`. You should have something like `src/routes/pixselve/[name]`.
-   3. Copy the `index.svelte` of the cande theme (available in `src/routes/cande`) and paste it in your theme folder you just created.
-   4. Find the `<RotatingAvatar/>` component and change the `imagePath` property to your image. Ignore the `static` folder, the URL should start with your name.
-   5. Now edit the `backgroundColor` and `color` properties of `<Room/>` and `<TextCustom />` as you like.
-   6. Finish by setting a custom text in the two `<TextCustom />` components. Note that using `{name}` will be replaced with the URL parameter. For example, for the page `codyletroll.ml/pixselve`, `{name}` will be replaced with pixselve automatically.
-3. Test your code using the `Run and build the project` section
-4. Make a pull request
-5. Enjoy 😁
-
-# 🖥 Run and build the project
-```shell
-git clone https://github.com/Pixselve/codyletroll.git
-cd codyletroll
-npm install
+# create a new project in my-app
+npm init svelte@next my-app
 ```
-## Development 
 
+> Note: the `@next` is temporary
 
-```shell
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
 npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-Go to http://localhost:3000/ in your web browser.
+## Building
 
+Svelte apps are built with _adapters_, which optimise your project for deployment to different environments.
 
-## Build
-```shell
-npm run export
-npm run start
-```
+By default, `npm run build` will generate a Node app that you can run with `node build`. To use a different adapter, add it to the `devDependencies` in `package.json` making sure to specify the version as `next` and update your `svelte.config.cjs` to [specify your chosen adapter](https://kit.svelte.dev/docs#configuration-adapter). The following official adapters are available:
+
+- [@sveltejs/adapter-node](https://github.com/sveltejs/kit/tree/master/packages/adapter-node)
+- [@sveltejs/adapter-static](https://github.com/sveltejs/kit/tree/master/packages/adapter-static)
+- [@sveltejs/adapter-netlify](https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify)
+- [@sveltejs/adapter-vercel](https://github.com/sveltejs/kit/tree/master/packages/adapter-vercel)
+- ...more soon
+
+[See the adapter documentation for more detail](https://kit.svelte.dev/docs#adapters)
