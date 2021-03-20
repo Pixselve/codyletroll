@@ -1,4 +1,7 @@
 <script context="module" lang="ts">
+export const prerender = true;
+
+
 export async function load({ fetch, page }) {
   const res = await fetch(`/${ page.params.author }/${ page.params.name }.json`);
   if (res.ok) {
