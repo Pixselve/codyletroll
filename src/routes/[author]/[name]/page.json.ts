@@ -1,16 +1,17 @@
 import pages from "../../_pages";
-import type { Settings } from "../../_pages"
+import type { Settings } from "../../_pages";
 
 export function get({ params }) {
+
   if (params.author in pages) {
-    const page: Settings = pages[params.author]
+    const page: Settings = JSON.parse(JSON.stringify(pages[params.author]));
     for (let pageKey in page) {
       if (page.hasOwnProperty(pageKey) && typeof page[pageKey] === "string") {
-        page[pageKey] = page[pageKey].replace("$name", params.name)
-        page[pageKey] = page[pageKey].replace("$author", params.author)
+        page[pageKey] = page[pageKey].replace("$name", params.name);
+        page[pageKey] = page[pageKey].replace("$author", params.author);
       }
     }
-
+    console.log({ page, params });
     return {
       body: page
     };
