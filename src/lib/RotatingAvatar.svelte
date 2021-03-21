@@ -1,25 +1,11 @@
-<img class="rotating-avatar" src={imagePath} alt="rotating-avatar">
+<img class="rotating-avatar h-1/2 mt-15" src={imagePath} alt="rotating-avatar">
 
 <script lang="ts">
-  export let imagePath: string = "cody-o.png";
+export let imagePath: string = "cody-o.png";
 </script>
 
 <style>
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
-        50% {
-            transform: rotate(180deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
+    .rotating-avatar {
+        animation: rotate linear 3s infinite;
     }
-
-  .rotating-avatar {
-    max-height: 50%;
-    animation: rotate linear 3s infinite;
-    margin-top: 50px;
-  }
 </style>
