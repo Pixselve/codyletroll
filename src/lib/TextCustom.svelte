@@ -1,13 +1,10 @@
-<p style="--moveValue: {move}; --fontSize: {size}; color: {color}; {getTextShadow()}">
+<p class="m-0 text-center" style="--moveValue: {move}; --fontSize: {size}; color: {color}; {getTextShadow()}">
   <slot/>
 </p>
 
 <style lang="scss">
   p {
-    text-align: center;
     animation: linear infinite moveAnimation 2s;
-    max-width: 90%;
-    margin: 0;
     font-size: var(--fontSize);
     @media screen and (max-width: 1024px) {
       font-size: calc(0.75 * var(--fontSize));

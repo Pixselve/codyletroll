@@ -1,5 +1,5 @@
 {#if isHovered}
-  <svg class="door" on:click={forward} on:mouseenter={() => isHovered = true} on:mouseleave={() => isHovered = false}
+  <svg class="max-h-[40%] cursor-pointer" on:click={forward} on:mouseenter={() => isHovered = true} on:mouseleave={() => isHovered = false}
        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 410.26 671.16">
     <defs>
       <style>
@@ -72,7 +72,7 @@
     </g>
   </svg>
 {:else }
-  <svg on:click={forward} on:mouseenter={() => isHovered = true} on:mouseleave={() => isHovered = false} class="door"
+  <svg on:click={forward} on:mouseenter={() => isHovered = true} on:mouseleave={() => isHovered = false} class="max-h-[40%] cursor-pointer"
        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 410.26 670.86">
     <defs>
       <style>
@@ -142,18 +142,8 @@
 
 {/if}
 
-
-<style lang="scss">
-  .door {
-    max-height: 40%;
-    cursor: pointer;
-  }
-</style>
-
 <script lang="ts">
 export let color: string;
-
-
 import { createEventDispatcher } from "svelte";
 
 const dispatch = createEventDispatcher();
