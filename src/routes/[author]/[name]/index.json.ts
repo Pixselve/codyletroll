@@ -1,5 +1,5 @@
-import pages from "./_pages";
-import type { Settings } from "./_pages"
+import pages from "../../_pages";
+import type { Settings } from "../../_pages"
 
 export function get({ params }) {
   if (params.author in pages) {
