@@ -15,7 +15,7 @@
     <ul>
       {#each pages as page}
         <li>
-          <a class="p-6 hover:bg-gray-700 cursor-pointer flex flex-row" href={`/${page.author}/${name}`}>
+          <a sveltekit:prefetch class="p-6 hover:bg-gray-700 cursor-pointer flex flex-row" href={`/${page.author}/${name}`}>
             <img class="h-6 mr-3" src={page.imageURL} alt="">
             <div>
               <span>/{page.author}/</span><span class="text-yellow-700">{name}</span>
