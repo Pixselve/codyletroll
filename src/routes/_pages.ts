@@ -15,7 +15,7 @@ const settings: Record<string, Settings> = {
     textSecondaryColor: "#77FF00",
     textMainContent: "$name vous a Candisé !",
     textSecondaryContent: "Tu veux être ma lampe de chevet ? Pour que je t'allume tous les soirs",
-    imageURL: "/userPictures/cande,png",
+    imageURL: "/userPictures/cande.png",
     title: "$name a quelque chose à vous dire",
     description: "Hey ! C'est moi $name. J'ai vraiment envie de te dire quelque chose... Mais je t'avoue que je ne sais pas trop comment m'y prendre. ❤😘😍💋"
   },

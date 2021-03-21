@@ -22,7 +22,7 @@ export async function load({ fetch, page }) {
 </script>
 
 <script lang="ts">
-import type { Settings } from "./_pages";
+import type { Settings } from "../../_pages";
 import Room from "../../../lib/Room.svelte";
 import TextCustom from "../../../lib/TextCustom.svelte";
 import RotatingAvatar from "../../../lib/RotatingAvatar.svelte";
