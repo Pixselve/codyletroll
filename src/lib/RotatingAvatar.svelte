@@ -1,4 +1,4 @@
-<img class="rotating-avatar h-1/2 mt-15" src={imagePath} alt="rotating-avatar">
+<img class="rotating-avatar h-1/3 mt-20" src={imagePath} alt="rotating-avatar">
 
 <script lang="ts">
 export let imagePath: string = "cody-o.png";
