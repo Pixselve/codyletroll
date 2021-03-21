@@ -11,7 +11,6 @@ export function get({ params }) {
         page[pageKey] = page[pageKey].replace("$author", params.author);
       }
     }
-    console.log({ page, params });
     return {
       body: page
     };
