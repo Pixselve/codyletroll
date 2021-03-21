@@ -69,6 +69,16 @@ const settings: Record<string, Settings> = {
     title: "$name a besoin de ton aide",
     description: "Regardes là bas ! On dirais $name en train de ramper, va vite l'aider !"
   },
+  "toto": {
+    backgroundColor: "#D1D1D1",
+    textMainColor: "#4600FF",
+    textSecondaryColor: "#FF0059",
+    textMainContent: "Trop cool ! $name vous a totomisé 😱",
+    textSecondaryContent: "Oh merde, j'ai perdu mon numéro, j'peux avoir le tiens 😉😎❤😜 ?",
+    imageURL: "https://cdn.discordapp.com/attachments/823314539407343646/823317296217849916/toto_detoure.png",
+    title: "$name a quelque chose à vous dire",
+    description: "Ouvre ce message de $name, tu sera pas déçu"
+  }
 };
 
 export default settings;
