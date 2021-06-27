@@ -7,7 +7,7 @@
   <meta property="twitter:title" content="Cody le troll">
   <meta property="twitter:description" content="Découvrez les pages de {pages.slice(0, 7).map(el => el.author).join(', ')}...">
   <meta property="og:image" content="/meta-image.webp">
-  <meta property="twitter:image" content="/meta-image.webp">
+  <meta property="twitter:image" content="/meta-image.jpg">
 </svelte:head>
 
 <div class="h-screen w-screen flex items-center flex-col justify-center content-center bg-cody">
