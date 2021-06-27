@@ -25,7 +25,6 @@ import TextCustom from "../../../lib/TextCustom.svelte";
 import RotatingAvatar from "../../../lib/RotatingAvatar.svelte";
 
 export let settings: Settings;
-export let name: String;
 </script>
 
 <svelte:head>
