@@ -1,12 +1,11 @@
 <script context="module" lang="ts">
   import * as Buffer from "buffer"
 
-    export async function load({ fetch, params }) {
-        const {base64} = params;
+    export async function load({ fetch, url }: LoadInput) {
+        const base64 = url.searchParams.get("data");
        
         const b = Buffer.Buffer.from(base64, "base64")
         const s = b.toString();
-
 
         return {
           props: {
@@ -24,6 +23,7 @@
     import Room from "../../lib/Room.svelte";
     import TextCustom from "../../lib/TextCustom.svelte";
     import RotatingAvatar from "../../lib/RotatingAvatar.svelte";
+import type { LoadInput } from "@sveltejs/kit";
     
     export let settings: Settings;
     </script>

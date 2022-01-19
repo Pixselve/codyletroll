@@ -69,7 +69,7 @@ import type { Settings } from './_pages';
 
     function submit() {
         const base64EncodedData = window.btoa(unescape(encodeURIComponent( JSON.stringify(form_data) )));
-        goto(`/custom/${base64EncodedData}`)
+        goto(`/custom?data=${base64EncodedData}`)
     }
 
 </script>
