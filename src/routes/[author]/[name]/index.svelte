@@ -1,11 +1,11 @@
 <script context="module" lang="ts">
-export async function load({ fetch, page }) {
-  const res = await fetch(`/${ page.params.author }/${ page.params.name }/page.json`);
+export async function load({ fetch, params }) {
+  const res = await fetch(`/${ params.author }/${ params.name }/page.json`);
   if (res.ok) {
     return {
       props: {
         settings: await res.json(),
-        name: page.params.name
+        name: params.name
       }
     };
   } else {

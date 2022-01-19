@@ -38,7 +38,7 @@ export let pages: any[] = [];
 </script>
 
 <script context="module" lang="ts">
-export async function load({ fetch, page }) {
+export async function load({ fetch }) {
   const res = await fetch(`/authors.json`);
   return {
     props: {
