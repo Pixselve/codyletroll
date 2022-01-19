@@ -3,9 +3,8 @@
 
     export async function load({ fetch, params }) {
         const {base64} = params;
-        console.log(base64);
-
-        const b = new Buffer.Buffer(base64, 'base64')
+       
+        const b = Buffer.Buffer.from(base64, "base64")
         const s = b.toString();
 
 
