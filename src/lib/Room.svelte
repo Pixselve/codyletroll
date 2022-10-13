@@ -1,22 +1,24 @@
 <script lang="ts">
 import Door from "./Door.svelte";
-
-let isDoorOpened = false;
-import { onMount } from 'svelte';
-
+import { onDestroy, onMount } from 'svelte';
 
 export let backgroundColor: string = "#f1ff59";
 export let songPath: string = "/music.mp3";
+export let emojis = ['😘', '❤', '💋'];
+
+let isDoorOpened = false;
+
+
+let audio: HTMLAudioElement;
 
 function openDoor() {
   isDoorOpened = true;
-  const audio = new Audio(songPath);
+  audio = new Audio(songPath);
   audio.loop = true;
   audio.play();
+
 }
 
-
-export let emojis = ['😘', '❤', '💋'];
 
 let confetti = new Array(100).fill(undefined, undefined, undefined)
   .map((_, i) => {
@@ -40,11 +42,19 @@ onMount(() => {
       if (emoji.y > 120) emoji.y = -20;
       return emoji;
     });
+
   }
 
   loop();
 
   return () => cancelAnimationFrame(frame);
+});
+
+onDestroy(() => {
+  if (audio) {
+    audio.pause();
+  }
+
 });
 
 </script>
@@ -61,16 +71,7 @@ onMount(() => {
   </main>
 
 {:else}
-  <main class="doorBackground bg-[#2E2345] overflow-hidden h-screen w-full flex items-center justify-center flex-col">
+  <main class="bg-[url('/background.svg')] bg-[#2E2345] overflow-hidden h-screen w-full flex items-center justify-center flex-col">
     <Door color={backgroundColor} on:click={openDoor}/>
   </main>
 {/if}
-
-
-<style lang="scss">
-  .doorBackground {
-    background-image: url("/background.svg");
-  }
-
-
-</style>

@@ -1,8 +1,8 @@
-import pages from "../../_pages";
-import type { Settings } from "../../_pages";
+import { error } from "@sveltejs/kit";
+import pages, { Settings } from "$lib/pages";
 
-export function get({ params }) {
-
+/** @type {import('./$types').PageLoad} */
+export async function load({ fetch, params }) {
   if (params.author in pages) {
     const page: Settings = JSON.parse(JSON.stringify(pages[params.author]));
     for (const pageKey in page) {
@@ -11,15 +11,15 @@ export function get({ params }) {
         page[pageKey] = page[pageKey].replace("$author", params.author);
       }
     }
+
+    console.log(page);
     return {
-      body: page
+
+      settings: page,
+      name: params.name
+
     };
   }
 
-  return {
-    status: 404,
-    body: {
-      error: 'Not found'
-    }
-  };
+  throw error(404, "Page not found");
 }

@@ -1,4 +1,4 @@
 <script>
-import "../global.css";
+import '../app.postcss';
 </script>
 <slot/>

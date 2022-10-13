@@ -91,5 +91,15 @@ export interface Settings {
   textSecondaryContent: string
   imageURL: string,
   title: string,
-  description: string
+  description: string,
+  music?: string
+}
+
+
+export function getPages() {
+  let result = [];
+  for (const pagesKey in settings) {
+    result = [...result, { ...settings[pagesKey], author: pagesKey }];
+  }
+  return result;
 }
