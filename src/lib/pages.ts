@@ -92,12 +92,13 @@ export interface Settings {
   imageURL: string,
   title: string,
   description: string,
-  music?: string
+  music?: string,
+  ogImage?: string
 }
 
 
 export function getPages() {
-  let result = [];
+  let result: any[] = [];
   for (const pagesKey in settings) {
     result = [...result, { ...settings[pagesKey], author: pagesKey }];
   }

@@ -1,8 +1,8 @@
 <script lang="ts">
-import type { Settings } from "../_pages";
 import Room from "../../lib/Room.svelte";
 import TextCustom from "../../lib/TextCustom.svelte";
 import RotatingAvatar from "../../lib/RotatingAvatar.svelte";
+import type { Settings } from "../../lib/pages";
 
 export let data: { settings: Settings };
 $: music = data.settings.music === "music" ? "/music.mp3" : "/music2.mp3";
@@ -16,6 +16,7 @@ $: music = data.settings.music === "music" ? "/music.mp3" : "/music2.mp3";
   <meta property="og:description" content="{data.settings.description}">
   <meta property="twitter:title" content="{data.settings.title}">
   <meta property="twitter:description" content="{data.settings.description}">
+  <meta property="og:image" content={data.settings.ogImage ?? "" } />
 </svelte:head>
 
 <Room songPath={music} backgroundColor={data.settings.backgroundColor}>
