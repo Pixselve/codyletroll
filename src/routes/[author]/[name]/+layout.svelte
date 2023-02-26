@@ -1,3 +1,3 @@
 <main class="overflow-hidden relative">
-  <slot/>
+  <slot />
 </main>

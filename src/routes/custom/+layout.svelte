@@ -1,4 +1,3 @@
 <main class="overflow-hidden relative">
-    <slot/>
-  </main>
-  
+  <slot />
+</main>
