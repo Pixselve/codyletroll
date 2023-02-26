@@ -1,25 +1,26 @@
 import { error } from "@sveltejs/kit";
-import pages, { Settings } from "$lib/pages";
+import type { PageLoad } from "./$types";
+import type { Settings } from "../../../lib/Settings";
+import jsonPage from "../../../lib/pages.json";
 
-/** @type {import('./$types').PageLoad} */
-export async function load({ fetch, params }) {
-  if (params.author in pages) {
-    const page: Settings = JSON.parse(JSON.stringify(pages[params.author]));
-    for (const pageKey in page) {
-      if (page.hasOwnProperty(pageKey) && typeof page[pageKey] === "string") {
-        page[pageKey] = page[pageKey].replace("$name", params.name);
-        page[pageKey] = page[pageKey].replace("$author", params.author);
-      }
-    }
+export const load = (async ({ params }) => {
+  const author = params.author;
+  const name = params.name;
+  // check if the page exists
+  if (author in jsonPage) {
+    const authorPages = jsonPage[author as keyof typeof jsonPage];
+    //replace $name in each property of the object with the name parameter
+    const page = Object.fromEntries(
+      Object.entries(authorPages).map(([key, value]) => [
+        key,
+        value.replace("$name", name),
+      ])
+    ) as unknown as Settings;
 
-    console.log(page);
     return {
-
+      name: name,
       settings: page,
-      name: params.name
-
     };
   }
-
   throw error(404, "Page not found");
-}
+}) satisfies PageLoad;
